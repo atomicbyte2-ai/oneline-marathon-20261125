@@ -14,5 +14,5 @@ if (LINE.includes("\n") || LINE.includes("\r")) {
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR || "/output";
 mkdirSync(outDir, { recursive: true });
-writeFileSync(join(outDir, "entry.txt"), LINE + "\n", "utf8");
+writeFileSync(join(outDir, "entry.txt"), LINE, "utf8");
 console.log(`Wrote ${LINE.length}-character line to ${join(outDir, "entry.txt")}`);
